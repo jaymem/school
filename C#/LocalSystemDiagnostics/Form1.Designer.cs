@@ -373,7 +373,7 @@
             this.ClientSize = new System.Drawing.Size(659, 439);
             this.Controls.Add(this.MainTabControl);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Local System Diagnostics";
             this.MainTabControl.ResumeLayout(false);
             this.systemTab.ResumeLayout(false);
             this.hardwareTab.ResumeLayout(false);

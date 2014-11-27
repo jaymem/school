@@ -55,7 +55,7 @@ namespace LocalSystemDiagnostics
                     foreach (PropertyData systemProperty in mngmtObj.Properties)
                     {
                         ListViewItem listItem = new ListViewItem(listGroup);
-                        
+      
                         string propertyType = systemProperty.Value.GetType().ToString();
 
                         if (list.Items.Count % 2 != 0)
@@ -96,10 +96,10 @@ namespace LocalSystemDiagnostics
                     }
                 }
             }
-            catch (System.Exception ex)
+            catch (WMIException ex)
             {
                 MessageBox.Show(
-                    "Can't populate data due to the following error: \n" + ex.Message,
+                    "Can't populate data due to the following error: \n" + ex.StackTrace,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Information
                 );
             }
