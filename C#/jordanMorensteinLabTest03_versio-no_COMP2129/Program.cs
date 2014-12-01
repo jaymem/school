@@ -9,8 +9,6 @@ namespace jordanMorensteinLabTest03_versio_no_COMP2129
 {
     class Program
     {
-        int smallest = 0; int large = 0; int num;
-
         static void Main(string[] args)
         {
             Numbers labtest = new Numbers();
@@ -20,6 +18,7 @@ namespace jordanMorensteinLabTest03_versio_no_COMP2129
             labtest.readFile();
 
             Console.WriteLine("The largest number is " + labtest.getLargest());
+            Console.WriteLine("The smallest number is " + labtest.getSmallest());
 
             Console.ReadLine();
         }

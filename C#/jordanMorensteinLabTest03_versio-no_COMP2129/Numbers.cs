@@ -11,8 +11,8 @@ namespace jordanMorensteinLabTest03_versio_no_COMP2129
     {
         private int large;
         private int smallest;
-        int value;
-        string input = null;
+        private int value;
+        private string input = null;
 
         public void createFile()
         {
@@ -21,14 +21,12 @@ namespace jordanMorensteinLabTest03_versio_no_COMP2129
                 using (StreamWriter writer = File.CreateText("numbers.txt"))
                 {
                     for (int i = 1; i <= 10; i++)
-                        writer.WriteLine(i);
-                    // Insert a new line.
-                    writer.Write(writer.NewLine);
+                        writer.WriteLine(i * 43);
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error!: \n " + e.Message);
             }
             Console.WriteLine("Created file press enter...");
             Console.ReadLine();
@@ -41,21 +39,25 @@ namespace jordanMorensteinLabTest03_versio_no_COMP2129
                 while ((input = sr.ReadLine()) != null)
                 {
                     int.TryParse(input, out value);
-                    if (value > large)//comparing each time entered number with large one
-                    {
-                        large = value;
-                    }
-                    if (value < smallest)//comparing each time entered number with smallest one
-                    {
-                        smallest = value;
-                    }
+                    determineLargest(value);
                 }
             }
+        }
+
+        public void determineLargest(int number)
+        {
+            if (number > large) large = number;
+            if (number < smallest) smallest = number;
         }
 
         public int getLargest()
         {
             return large;
+        }
+
+        public int getSmallest()
+        {
+            return smallest;
         }
     }
 }
