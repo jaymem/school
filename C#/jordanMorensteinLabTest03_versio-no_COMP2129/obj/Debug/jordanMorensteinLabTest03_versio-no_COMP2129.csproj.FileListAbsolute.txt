@@ -1,0 +1,5 @@
+C:\Users\jay rue\Documents\Visual Studio 2012\Projects\OdeToBugs\jordanMorensteinLabTest03_versio-no_COMP2129\bin\Debug\jordanMorensteinLabTest03_versio-no_COMP2129.exe.config
+C:\Users\jay rue\Documents\Visual Studio 2012\Projects\OdeToBugs\jordanMorensteinLabTest03_versio-no_COMP2129\bin\Debug\jordanMorensteinLabTest03_versio-no_COMP2129.exe
+C:\Users\jay rue\Documents\Visual Studio 2012\Projects\OdeToBugs\jordanMorensteinLabTest03_versio-no_COMP2129\bin\Debug\jordanMorensteinLabTest03_versio-no_COMP2129.pdb
+C:\Users\jay rue\Documents\Visual Studio 2012\Projects\OdeToBugs\jordanMorensteinLabTest03_versio-no_COMP2129\obj\Debug\jordanMorensteinLabTest03_versio-no_COMP2129.exe
+C:\Users\jay rue\Documents\Visual Studio 2012\Projects\OdeToBugs\jordanMorensteinLabTest03_versio-no_COMP2129\obj\Debug\jordanMorensteinLabTest03_versio-no_COMP2129.pdb

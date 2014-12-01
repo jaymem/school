@@ -1,0 +1,31 @@
+﻿using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace jordanMorensteinLabTest03_versio_no_COMP2129
+{
+    class Program
+    {
+        int smallest = 0; int large = 0; int num;
+
+        static void Main(string[] args)
+        {
+            Numbers labtest = new Numbers();
+
+            labtest.createFile();
+
+            labtest.readFile();
+
+            Console.WriteLine("The largest number is " + labtest.getLargest());
+
+            Console.ReadLine();
+        }
+
+        
+
+        
+    }
+}
