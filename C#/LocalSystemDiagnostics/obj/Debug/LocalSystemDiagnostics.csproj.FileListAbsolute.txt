@@ -10,3 +10,4 @@ c:\Users\jay rue\Documents\Visual Studio 2012\Projects\OdeToBugs\LocalSystemDiag
 c:\Users\jay rue\Documents\Visual Studio 2012\Projects\OdeToBugs\LocalSystemDiagnostics\obj\Debug\LocalSystemDiagnostics.application
 c:\Users\jay rue\Documents\Visual Studio 2012\Projects\OdeToBugs\LocalSystemDiagnostics\obj\Debug\LocalSystemDiagnostics.exe
 c:\Users\jay rue\Documents\Visual Studio 2012\Projects\OdeToBugs\LocalSystemDiagnostics\obj\Debug\LocalSystemDiagnostics.pdb
+C:\Users\jay rue\Documents\Visual Studio 2012\Projects\OdeToBugs\LocalSystemDiagnostics\obj\Debug\LocalSystemDiagnostics.csprojResolveAssemblyReference.cache

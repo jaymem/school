@@ -13,9 +13,11 @@ namespace LocalSystemDiagnostics
 {
     class ListPopulator
     {
-        private static string values;
+        private static string valueString;
+        private static ListView test;
+        private static string tester;
 
-        public static void PopulateListView(string key, ref ListView list)
+        public static void PopulateListView(string key, ref ListView list, bool noNull)
         {
             list.Items.Clear();
 
@@ -55,8 +57,6 @@ namespace LocalSystemDiagnostics
                     foreach (PropertyData systemProperty in mngmtObj.Properties)
                     {
                         ListViewItem listItem = new ListViewItem(listGroup);
-      
-                        string propertyType = systemProperty.Value.GetType().ToString();
 
                         if (list.Items.Count % 2 != 0)
                             listItem.BackColor = Color.White;
@@ -65,26 +65,24 @@ namespace LocalSystemDiagnostics
 
                         listItem.Text = systemProperty.Name;
 
-                        if (propertyType != "")
+                        if (systemProperty.Value != null && systemProperty.Value.ToString() != "")
                         {
-                            switch (propertyType)
+                            switch (systemProperty.Value.GetType().ToString())
                             {
                                 case "System.String[]":
                                     string[] propertyValues = (string[])systemProperty.Value;
-                                    string valueString = "";
 
                                     foreach (string value in propertyValues)
                                         valueString += value + " ";
-
+                                    
                                     listItem.SubItems.Add(valueString);
                                     break;
                                 case "System.UInt16[]":
                                     ushort[] shortValues = (ushort[])systemProperty.Value;
-                                    valueString = "";
 
                                     foreach (ushort value in shortValues)
                                         valueString += value.ToString() + " ";
-
+                                    
                                     listItem.SubItems.Add(valueString);
                                     break;
                                 default:
@@ -93,6 +91,7 @@ namespace LocalSystemDiagnostics
                             }
                         }
                         list.Items.Add(listItem);
+                        test = list;
                     }
                 }
             }
@@ -103,6 +102,33 @@ namespace LocalSystemDiagnostics
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Information
                 );
             }
+        }
+
+        public static string GetWin32Class(string stringIn)
+        {
+            StringBuilder StringBuilder1 = new StringBuilder(string.Empty);
+            ManagementClass ManagementClass1 = new ManagementClass(stringIn);
+            //Create a ManagementObjectCollection to loop through
+            ManagementObjectCollection ManagemenobjCol = ManagementClass1.GetInstances();
+            //Get the properties in the class
+            PropertyDataCollection properties = ManagementClass1.Properties;
+            foreach (ManagementObject obj in ManagemenobjCol)
+            {
+                foreach (PropertyData property in properties)
+                {
+                    try
+                    {
+                        StringBuilder1.AppendLine(property.Name + ":  " +
+                          obj.Properties[property.Name].Value.ToString());
+                    }
+                    catch
+                    {
+                        //Add codes to manage more informations
+                    }
+                }
+                StringBuilder1.AppendLine();
+            }
+            return StringBuilder1.ToString();
         }
     }
 }

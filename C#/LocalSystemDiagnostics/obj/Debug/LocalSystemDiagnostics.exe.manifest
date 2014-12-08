@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LocalSystemDiagnostics.exe" size="19968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LocalSystemDiagnostics.exe" size="26624">
       <assemblyIdentity name="LocalSystemDiagnostics" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KydU9qLoWDF6rTr/cCtH08TedaYpprPhl0l9YQTfQcA=</dsig:DigestValue>
+        <dsig:DigestValue>zKdNh9EKgcQJmPSrAj/IrumBjvv/LeGLLylRiZDM7a0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
